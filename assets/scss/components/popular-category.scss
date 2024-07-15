@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.popular-category {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .popular-title {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 1.77304964%; // 25px / 1410px
+    border-bottom: 2px solid $secondary-color;
+    border-top: 2px solid $secondary-color;
+    margin-top: 20px;
+
+    h2 {
+      font-family: $body-font-title;
+      font-size: $font-size-32;
+    }
+  }
+
+  .popular-product {
+    padding: 0 1.77304964%; // 25px / 1410px
+  }
+}

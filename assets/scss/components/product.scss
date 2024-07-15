@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .product-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    border-top: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+    margin: 40px 0;
+
+    h1 {
+      font-family: $body-font-title;
+      font-size: 5vw; // 72px to 1440px
+      line-height: 5vw; // 72px to 1440px
+    }
+  }
+
+  .product-list-container {
+    padding: 0 1.77304964%; // 25px / 1410px
+  }
+}

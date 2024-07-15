@@ -1,0 +1,131 @@
+@import '../variables.scss';
+
+.product-list-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+
+    .product {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      outline: 2px solid $secondary-color;
+
+      .number-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: fit-content;
+        width: fit-content;
+        border-right: 2px solid $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+        padding: 5px 10px;
+
+        h3 {
+          font-size: $font-size-16;
+          color: $black;
+          opacity: 0.7;
+        }
+      }
+
+      .icon-add {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+        &:hover {
+          cursor: pointer;
+
+          span {
+            color: $black;
+          }
+        }
+
+        span {
+          width: 25px;
+          height: 25px;
+          color: $secondary-color;
+        }
+      }
+
+      .img-product {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: $bg-base;
+
+        img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: contain;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .bottom-information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        border-top: 2px solid $secondary-color;
+        padding: 15px;
+        box-sizing: border-box;
+        color: $secondary-color;
+
+        h4 {
+          font-size: $font-size-16;
+          font-weight: 500;
+        }
+
+        h5 {
+          font-size: $font-size-14;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .more-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .more-btn {
+      display: flex;
+      padding: 10px 15px;
+      border: 2px solid $secondary-color;
+      margin-top: 60px;
+
+      &:hover {
+        cursor: pointer;
+        border-color: $black;
+        opacity: 0.8;
+
+        h4 {
+          color: $black;
+        }
+      }
+
+      h4 {
+        font-family: $body-font-base;
+        font-size: $font-size-16;
+        font-weight: 500;
+        color: $secondary-color;
+      }
+    }
+  }
+}
